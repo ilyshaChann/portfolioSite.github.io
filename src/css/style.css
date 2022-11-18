@@ -12,12 +12,12 @@ nav {
     color:#fff;
     font-size: 25px;
     line-height: 60px;
-    padding-left: 380px;
+    padding-left: 250px;
     float: left;
 }
 .menu {
     float: left;
-    padding-left: 430px;
+    padding-left: 330px;
 }
 .menu li {
     float: left;
@@ -30,13 +30,13 @@ nav {
 
 .main {
     width: 100%;
-    height: 100%;
-    background: url("../img/I_am_big.png") center top no-repeat, url("../img/bg.jpg") center/cover no-repeat;
-    box-shadow: 0px 0px 2px 0px black;
+    height: calc(100% - 60px);
+    background: url("../img/bg.jpg") center/cover no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .title {
     float: left;
-    margin: 425px 0px 0px 405px;
+    margin: 395px 0px 0px 405px;
     color: #2c384a;
     text-align: center;
     
@@ -61,15 +61,534 @@ nav {
     border-radius: 3px;
     font-size: 13px;
     background: none;
-    margin: 40px 8px 0px 8px;
+    margin: 40px 22px 0px -5px;
     padding: 0px 13px;
 }
 
 
-.about_me h2 {
+.about_me_container{
+    width: 666px;
+    margin: 0 auto;
+}
+
+.about_me_container h2 {
+    display: inline-block;
     text-align: center;
+    width: 120px;
+    font-size: 25px;
+    margin-top: 10%;
+    margin-left: calc(50% - 60px);
+    text-transform: uppercase;
+}
+
+.about_me_container hr {
+    width: 80px;
+    border: none;
+    height: 5px;
+    background: orange;
+    margin: 15px auto;
+    border-radius: 10px;
 }
 
 .I_am_png {
-   border-radius: 100%;
+    display: block;
+    width: 280px;
+    border-radius: 100%;
+    margin: 0 auto;
+    border: 1px solid gray;
+    
 }
+
+.I_am_big {
+    position: absolute;
+    right: calc(50% - 199px);
+    border-radius: 100% 100% 20% 20%;
+    
+}
+
+.about_me_span {
+    display: block;
+    text-align: justify;
+    margin-top: 5%;
+}
+
+.icon_save {
+    margin-right: 5px;
+    width: 18px;
+}
+
+.icon_save_and_button input{
+    background: none;
+    color: #79818d;
+    font-size: 16px;
+}
+
+.icon_save_and_button {
+    margin-left: calc(50% - 90px);
+    margin-top: 2%;
+    border: 2px solid #6d7682;
+    width: 200px;
+    text-align: center; 
+    border-radius: 3px;
+    padding: 10px 10px ;
+
+}
+
+.bg_what_can_i_do {
+    margin-top: 75px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 100%;
+    height: 525px;
+}
+
+.what_can_i_do h2 {
+    position: relative;
+    left: calc(50% - 80px);
+    top: 200px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.what_can_i_do hr {
+    width: 80px;
+    border: none;
+    height: 5px;
+    background: orange;
+    margin: 0px auto;
+    border-radius: 10px;
+    position: relative;
+    top: 220px;
+}
+
+.what_can_i_do ul {
+    display: flex;
+    position: relative;
+    bottom: 200px;
+    
+}
+
+.what_can_i_do li {
+    text-align: center; 
+    width: 400px;
+}
+
+.what_can_i_do ul h3 {
+    position: relative;
+    top: -40px;
+    font-size: 18px;
+    color: #cf7600;
+}
+
+.what_can_i_do ul img {
+    margin-top: -100px;
+}
+
+
+.what_can_i_do span {
+    display: inline-block;
+    width: 250px;
+}
+
+.keys h2 {
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.keys hr {
+    width: 60px;
+    border: none;
+    height: 5px;
+    background: orange;
+    margin: 0px auto;
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.keys span {
+    display: block;
+    text-align: center;
+    margin-top: 55px;
+
+}
+
+.keys img {
+    position: relative;
+    right: calc(50% - 620px);
+    top: 40px;
+}
+
+
+
+
+.client {
+    position: relative;
+    bottom: 166px;
+    left: 218px;
+}
+
+.client h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+.client span {
+    font-size: 12px;
+    color: #3f495a;
+}
+
+
+.site {
+    position: relative;
+    bottom: 152px;
+    left: 218px;
+}
+
+.site h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.site span {
+    font-size: 12px;
+    color: #3f495a;
+}
+
+
+
+.desc_keys input {
+    margin-left: 218px;
+    bottom: 130px;
+    position: relative;
+    padding: 14px 22px;
+    font-size: 20px;
+    background: #63b5ae;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 8px;
+    width: 210px; 
+}
+
+
+.title_keys {
+    position: relative;
+    left: 32%;
+    bottom: 45%;
+    width: 850px;
+}
+
+
+.title_keys h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.price {
+    margin-top: -80px;
+}
+
+.cost_calculation {
+    text-align: center;
+    font-size: 25px;    
+}
+
+.desc_price {
+    text-align: center;
+}
+
+.desc_price h2 {
+    margin-left: 348px;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 35px;
+    text-transform: uppercase;
+}
+
+.desc_price select {
+    width: 890px;
+    height: 60px;
+    border-radius: 3px;
+    padding-left: 25px;
+    color: #7d7d7d;
+}
+
+.desc_price hr {
+    width: 890px;
+    border: none;
+    height: 2px;
+    background: #d1d1d1;
+    margin: 0px auto;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 38px;
+}
+
+.terms_and_cost {
+    text-align: left;
+    margin-left: 348px;
+    font-size: 15.5px;
+}
+
+.terms_and_cost h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.bg_statistic {
+    margin-top: 150px;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+.statistic h2 {
+    position: relative;
+    text-align: center;
+    bottom: 365px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.statistic hr {
+    width: 85px;
+    border: none;
+    height: 5px;
+    background: orange;
+    margin: 0px auto;
+    border-radius: 10px;
+    position: relative;
+    bottom: 335px;
+}
+
+.statistic ul {
+    position: relative;
+    display: flex;
+    text-align: center;
+    left: calc(50% - 538px);
+    bottom: 272px;
+}
+
+.statistic li {
+    margin-right: 150px;
+}
+
+
+.statistic h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #323e4f;
+    font-weight: bold;
+}
+
+.statistic span {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #47515f;
+}
+
+.reviews h2 {
+    text-align: center;
+    position: relative;
+    bottom: 75px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.reviews hr {
+    width: 70px;
+    border: none;
+    height: 5px;
+    background: orange;
+    margin: 0px auto;
+    border-radius: 10px;
+    position: relative;
+    bottom: 45px;
+}
+
+
+.reviews {
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.photo {
+    margin-bottom: 25px;
+    margin-top: -15px;
+}
+
+.reviews h4 {
+    margin-bottom: 35px;
+    max-width: 700px;
+}
+
+.dot_reviews {
+    margin-top: 40px;
+    margin-bottom: 65px;
+}
+
+.dot_reviews img {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+
+.contacts h2 {
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    top: 70px;        
+    color:white;
+    text-transform: uppercase;
+}
+
+.contacts hr {
+    width: 85px;
+    border: none;
+    height: 5px;
+    background: orange;
+    margin: 0px auto;
+    border-radius: 10px;
+    position: relative;
+    bottom: 565px; 
+}
+
+.contacts_bg {
+    width: 100%;
+}
+
+.under_contacts {
+    margin: 0 auto;
+    width: 600px;
+    display: block;
+    text-align: center;
+    color: white;
+    bottom: 530px;
+    position: relative;
+}
+
+.contacts_icon img {
+    margin-left: 210px;
+}
+
+.contacts_icon {
+    text-align: center;
+    bottom: 500px;
+    position: relative;
+    margin-left: calc(50% - 997px);
+}
+
+.contacts_info {
+    text-align: center;
+    position: relative;
+    bottom: 475px;
+    color: white;
+}
+
+.contacts_info span {
+    margin-right: 92px;
+}
+
+.contacts_info a {
+    color: white;
+}
+
+.form_contacts_txt h2{
+    top: -435px;
+    font-size: 20px;
+}
+
+.form_contacts_txt {
+    
+}
+
+.form_contacts_textarea {
+    text-align: center;
+    position: relative;
+    bottom: 420px;
+}
+.form_contacts_textarea textarea {
+    margin-right: 12.5px;
+    margin-top: 15px;
+    margin-left: 12.5px;
+    text-align: left;
+    width: 290px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+
+.contacts_textarea_message {
+    width: 609px!important;
+    height: 80px!important;
+}
+
+.form_contacts_txt input {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    bottom: 395px;
+    height: 40px;
+    width: 170px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    border: solid 2px;
+    font-weight: bold;
+}
+
+.footer_bg {
+    text-align: center;
+    margin-top:-297px;
+    
+}
+
+.footer_bg h5 {
+    color: white;
+    margin-top: -54px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
