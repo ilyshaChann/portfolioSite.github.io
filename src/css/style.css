@@ -444,11 +444,12 @@ nav {
 
 .contacts h2 {
     text-align: center;
-    position: relative;
     font-size: 25px;
-    top: 70px;        
-    color:white;
+    margin-top: -40px;
+    color: white;
     text-transform: uppercase;
+    position: relative;
+    bottom: -70px;
 }
 
 .contacts hr {
@@ -503,18 +504,18 @@ nav {
 }
 
 .form_contacts_txt h2{
-    top: -435px;
+    margin-top: -88px;
     font-size: 20px;
+    position: relative;
+    bottom: 354px;
+    color: white;
 }
 
-.form_contacts_txt {
-    
-}
+
 
 .form_contacts_textarea {
     text-align: center;
-    position: relative;
-    bottom: 420px;
+    margin-top: -335px;
 }
 .form_contacts_textarea textarea {
     margin-right: 12.5px;
@@ -525,6 +526,7 @@ nav {
     height: 40px;
     padding-top: 10px;
     padding-left: 5px;
+    border-radius: 2px;
 }
 
 
@@ -533,23 +535,24 @@ nav {
     height: 80px!important;
 }
 
-.form_contacts_txt input {
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    bottom: 395px;
+.input_message {
     height: 40px;
     width: 170px;
     background: rgba(0, 0, 0, 0);
     color: white;
     border-radius: 5px;
-    border: solid 2px;
+    border: 2px solid white;
     font-weight: bold;
+    display: block;
+    margin-top: -394px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 420px;
 }
 
 .footer_bg {
     text-align: center;
-    margin-top:-297px;
     
 }
 
