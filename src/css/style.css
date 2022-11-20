@@ -6,14 +6,38 @@ body {
 nav {
     width: 100%;
     height: 60px;
-    background: #344051;}
+    background: #344051;
+    position: fixed;
+    z-index: 2;
+}
 .logo {
     color:#fff;
     font-size: 25px;
     line-height: 60px;
     padding-left: 250px;
     float: left;
+    -webkit-animation: move 1.2s ease;
+    -o-animation: move 1.2s ease;
+    animation: move 1.2s ease;
 }
+
+.logo a {
+    transition: all 0.7s ease;
+    color: white;
+    display: inline-block;
+}
+
+.logo a:hover{
+    transform: scale(1.07);
+    color: #9799cc;
+}
+
+.logo a:active {
+    transform: scale(1.09);
+    color: #9799cc;
+
+}
+
 .menu {
     float: left;
     padding-left: 330px;
@@ -26,45 +50,139 @@ nav {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: move_li 1s ease forwards;
+    -o-animation: move_li 1s ease forwards;
+    animation: move_li 1s ease forwards;
+    opacity: 0;
+}
+
+.menu li a {
+    transition: all 0.5s ease;
+    color: white;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    transform: scale(1.05);
+    color: #9799cc;
+}
+
+.menu li a:active {
+    transform: scale(1.07)
+}
+
+@keyframes move{
+    from{
+        opacity: 0;
+        margin-left: -250px;
+        margin-top: -60px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+        margin-top:0px;
+    }
+}
+
+@keyframes move_li {
+    from{
+        opacity: 0;
+        margin-top: -60px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes i_ammove{
+    from{
+        opacity: 0;
+        margin-left: 100px;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left:800px;
+    }
+    to{
+        opacity: 1;
+    
+    }
+}
+
+
+
+.menu li:nth-child(2){
+    animation-delay: 0.3s;
+}.menu li:nth-child(3){
+    animation-delay: 0.5s;
+}.menu li:nth-child(4){
+    animation-delay: 0.7s;
+}.menu li:nth-child(5){
+    animation-delay: 0.9s;
 }
 
 .main {
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100% ;
     background: url("../img/bg.jpg") center/cover no-repeat;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .title {
     float: left;
-    margin: 395px 0px 0px 405px;
     color: #2c384a;
     text-align: center;
-    
+    opacity: 0;
+    margin-left: calc(50% - 402.5px);
+    -webkit-animation: titlemove 1.5s ease forwards;
+    -o-animation: titlemove 1.5s ease forwards;
+    animation: titlemove 1.5s ease forwards;
+    -webkit-animation-delay: 0.9s;
+    -o-animation-delay:0.9s;
+    animation-delay: 0.9s;
 }
 .title h1 {
     font-size: 60px;
     font-weight: bold;
-    
 }
 .title h4 {
     margin-top: 35px;
     font-size: 20px;
     color: #79818d;
-    font-weight: 100px
+    font-weight: 100px;
 }
 
 .title input{
     height: 40px;
-    text-align: center;
     color: #79818d;
     border: 1.5px solid #6d7682;
     border-radius: 3px;
     font-size: 13px;
     background: none;
-    margin: 40px 22px 0px -5px;
-    padding: 0px 13px;
+    transition: 0.4s ease;
+    width: 100px;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: all 0.2s ease;
 }
 
+
+.title input:hover {
+    transform: scale(1.05);
+    background: #344051; 
+    color: white;
+}
+
+.title input:active {
+    transform: scale(1.07);
+}
 
 .about_me_container{
     width: 666px;
@@ -91,19 +209,26 @@ nav {
 }
 
 .I_am_png {
-    display: block;
-    width: 280px;
-    border-radius: 100%;
-    margin: 0 auto;
-    border: 1px solid gray;
+    border-radius: 100% 100% 20% 20%;
+    display: inline-block;
+    margin-left: calc(50% - 135px);
+    margin-top: -15px;
+    width: 270px;
+    height: 270px;
     
 }
 
 .I_am_big {
-    position: absolute;
-    right: calc(50% - 199px);
+    margin-left: calc(50% - 199px);
     border-radius: 100% 100% 20% 20%;
-    
+    margin-top: 60px;
+    opacity: 0;
+    -webkit-animation: i_ammove 1.2s ease forwards;
+    -o-animation: i_ammove 1.2s ease forwards;
+    animation: i_ammove 1.2s ease forwards;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s; 
 }
 
 .about_me_span {
@@ -121,21 +246,36 @@ nav {
     background: none;
     color: #79818d;
     font-size: 16px;
+    transition: all 0.4s ease;
 }
 
 .icon_save_and_button {
     margin-left: calc(50% - 90px);
-    margin-top: 2%;
+    margin-top: 50px;
     border: 2px solid #6d7682;
     width: 200px;
-    text-align: center; 
+    text-align: center;
     border-radius: 3px;
-    padding: 10px 10px ;
-
+    padding: 10px 10px;
+    transition: all 0.4s ease;
 }
 
+.icon_save_and_button:hover {
+    transform: scale(1.05);
+    background: #9799cc;
+}
+
+.icon_save_and_button:active{
+    transform: scale(1.08);
+}
+
+.icon_save_and_button input:hover{
+    color: white;
+}
+
+
 .bg_what_can_i_do {
-    margin-top: 75px;
+    margin-top: 45px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     width: 100%;
     height: 525px;
@@ -143,8 +283,8 @@ nav {
 
 .what_can_i_do h2 {
     position: relative;
-    left: calc(50% - 80px);
-    top: 200px;
+    text-align: center;
+    top: 170px;
     text-transform: uppercase;
     font-size: 25px;
 }
@@ -157,13 +297,13 @@ nav {
     margin: 0px auto;
     border-radius: 10px;
     position: relative;
-    top: 220px;
+    top: 195px;
 }
 
 .what_can_i_do ul {
     display: flex;
     position: relative;
-    bottom: 200px;
+    bottom: 170px;
     
 }
 
@@ -271,8 +411,19 @@ nav {
     color: white;
     border-radius: 8px;
     width: 210px; 
+    transition: all 0.3s ease;
+    
 }
 
+.desc_keys input:hover{
+    transform: scale(1.03);
+    color: #006069;
+    background: #6dcfc6;
+}
+
+.desc_keys input:active{
+    transform: scale(1.05);
+}
 
 .title_keys {
     position: relative;
@@ -285,6 +436,7 @@ nav {
 .title_keys h2 {
     font-size: 16px;
     margin-bottom: 12px;
+    margin-top: 30px;
 }
 
 .price {
@@ -315,6 +467,12 @@ nav {
     border-radius: 3px;
     padding-left: 25px;
     color: #7d7d7d;
+    transition: all 0.5s ease;
+}
+
+.desc_price select:hover{
+    transform: scale(1.02);
+    color: black;
 }
 
 .desc_price hr {
@@ -431,6 +589,7 @@ nav {
     max-width: 700px;
 }
 
+
 .dot_reviews {
     margin-top: 40px;
     margin-bottom: 65px;
@@ -481,11 +640,25 @@ nav {
     margin-left: 210px;
 }
 
+
+
 .contacts_icon {
     text-align: center;
     bottom: 500px;
     position: relative;
     margin-left: calc(50% - 997px);
+}
+
+.contacts_icon a{
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.contacts_icon a:hover {
+    transform: scale(1.02);
+}
+.contacts_icon a:active {
+    transform: scale(1.05);
 }
 
 .contacts_info {
@@ -495,8 +668,23 @@ nav {
     color: white;
 }
 
+.contacts_info a {
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.contacts_info a:hover {
+    transform: scale(1.02);
+}
+
+.contacts_info a:active {
+    transform: scale(1.03);
+    color: #edf6ff;
+}
+
 .contacts_info span {
     margin-right: 92px;
+    transition: all 0.2s ease;
 }
 
 .contacts_info a {
@@ -517,6 +705,7 @@ nav {
     text-align: center;
     margin-top: -335px;
 }
+
 .form_contacts_textarea textarea {
     margin-right: 12.5px;
     margin-top: 15px;
@@ -527,6 +716,12 @@ nav {
     padding-top: 10px;
     padding-left: 5px;
     border-radius: 2px;
+    transition: all 0.5s ease;
+}
+
+.form_contacts_textarea textarea:hover {
+    transform: scale(1.01);
+    background: #edf6ff;
 }
 
 
@@ -549,6 +744,17 @@ nav {
     margin-right: auto;
     position: relative;
     top: 420px;
+    transition: all 0.5s ease;
+}
+
+.input_message:hover {
+    transform: scale(1.05);
+    
+}
+
+.input_message:active {
+    transform: scale(1.07);
+    background: #7c9ebf;
 }
 
 .footer_bg {
