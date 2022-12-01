@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Franklin_Gothic';
+    src: url('../fonts/FranklinGothic-Medium.eot');
+    src: url('FranklinGothic-Medium.eot?#iefix') format('../fonts/embedded-opentype'), url('../fonts/FranklinGothic-Medium.woff2') format('woff2'), url('../fonts/FranklinGothic-Medium.woff') format('woff'), url('../fonts/FranklinGothic-Medium.ttf') format('truetype'), url('../fonts/FranklinGothic-Medium.svg#FranklinGothic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
 body {
     font-family: Arial, sans-serif;
 
@@ -13,12 +21,23 @@ nav {
     background: #344051;
     position: fixed;
     z-index: 2;
+    font-family: 'Franklin_Gothic';
+
 }
+.fa {
+    font-size: 22px;
+    position: relative;
+    right: 5px;
+}
+
+.button-color:visited {
+    color: white;
+}
+
 .logo {
     color:#fff;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 60px;
-    padding-left: 250px;
     float: left;
     -webkit-animation: move 1.2s ease;
     -o-animation: move 1.2s ease;
@@ -29,6 +48,7 @@ nav {
     transition: all 0.7s ease;
     color: white;
     display: inline-block;
+    text-decoration: none;
 }
 
 .logo a:hover{
@@ -43,16 +63,14 @@ nav {
 }
 
 .menu {
-    float: left;
-    padding-left: 330px;
-
+    float: left;   
 }
 .menu li {
     float: left;
     color: #fff;
     line-height: 60px;
     margin-right: 40px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     -webkit-animation: move_li 1s ease forwards;
     -o-animation: move_li 1s ease forwards;
@@ -64,6 +82,7 @@ nav {
     transition: all 0.5s ease;
     color: white;
     display: inline-block;
+    text-decoration: none;
 }
 
 .menu li a:hover {
@@ -112,7 +131,7 @@ nav {
 @keyframes titlemove{
     from{
         opacity: 0;
-        margin-left:800px;
+        margin-left:-200px;
     }
     to{
         opacity: 1;
@@ -134,26 +153,30 @@ nav {
 
 .main {
     width: 100%;
-    height: 100% ;
-    background: url("../img/bg.jpg") center/cover no-repeat;
+    height: 100%;
+    background: url("../img/I_am_big.png") 80% no-repeat, url("../img/white_bg_2.jpg") center/100% 100% no-repeat;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .title {
     float: left;
     color: #2c384a;
     text-align: center;
+    width: 100%;
     opacity: 0;
-    margin-left: calc(50% - 402.5px);
     -webkit-animation: titlemove 1.5s ease forwards;
     -o-animation: titlemove 1.5s ease forwards;
     animation: titlemove 1.5s ease forwards;
     -webkit-animation-delay: 0.9s;
     -o-animation-delay:0.9s;
     animation-delay: 0.9s;
+    font-family: 'Franklin_Gothic';
 }
+
+
 .title h1 {
-    font-size: 60px;
+    font-size: 70px;
     font-weight: bold;
+    
 }
 .title h4 {
     margin-top: 35px;
@@ -171,7 +194,7 @@ nav {
     background: none;
     transition: 0.4s ease;
     width: 100px;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-right: 10px;
     margin-left: 10px;
     transition: all 0.2s ease;
@@ -188,44 +211,9 @@ nav {
     transform: scale(1.07);
 }
 
-.about_me_container{
-    width: 666px;
-    margin: 0 auto;
-}
 
-.about_me_container h2 {
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-    font-size: 25px;
-    margin-top: 10%;
-    margin-left: calc(50% - 60px);
-    text-transform: uppercase;
-}
-
-.about_me_container hr {
-    width: 80px;
-    border: none;
-    height: 5px;
-    background: orange;
-    margin: 15px auto;
-    border-radius: 10px;
-}
-
-.I_am_png {
-    border-radius: 100% 100% 20% 20%;
-    display: inline-block;
-    margin-left: calc(50% - 135px);
-    margin-top: -15px;
-    width: 270px;
-    height: 270px;
-    
-}
-
-.I_am_big {
-    margin-left: calc(50% - 199px);
-    border-radius: 100% 100% 20% 20%;
-    margin-top: 60px;
+/*.I_am_big img{
+    border-radius: 100% 100% 50% 50%;
     opacity: 0;
     -webkit-animation: i_ammove 1.2s ease forwards;
     -o-animation: i_ammove 1.2s ease forwards;
@@ -233,18 +221,45 @@ nav {
     -webkit-animation-delay: 0.6s;
     -o-animation-delay: 0.6s;
     animation-delay: 0.6s; 
+    
+}*/
+/*
+.about_me_container{
+    width: 666px;
+    margin: 0 auto;
+    font-family: 'Franklin_Gothic';
 }
+*/
+
+.about_me_container h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Franklin_Gothic';
+}
+
+.about_me_container hr {
+    width: 80px;
+    border: none;
+    height: 5px;
+    background: #fa9200;
+    margin: 15px auto;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.I_am_png {
+    border-radius: 100% 100% 50% 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: -15px;
+}
+
+
 
 .about_me_span {
-    display: block;
-    text-align: justify;
-    margin-top: 5%;
+    font-family: 'Calibri', sans-serif;
 }
 
-.icon_save {
-    margin-right: 5px;
-    width: 18px;
-}
 
 .icon_save_and_button input{
     background: none;
@@ -254,14 +269,12 @@ nav {
 }
 
 .icon_save_and_button {
-    margin-left: calc(50% - 90px);
-    margin-top: 50px;
     border: 2px solid #6d7682;
-    width: 200px;
-    text-align: center;
     border-radius: 3px;
-    padding: 10px 10px;
+    padding: 8px 8px;
     transition: all 0.4s ease;
+    width: 190px;
+    margin: 0 auto;
 }
 
 .icon_save_and_button:hover {
@@ -277,20 +290,22 @@ nav {
     color: white;
 }
 
+.fa-dow {
+    font-size: 17px;
+    margin-right: 5px;
+}
 
-.bg_what_can_i_do {
-    margin-top: 45px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    width: 100%;
-    height: 525px;
+.what_can_i_do {
+    background: url("../img/background_what_can_i_do.jpg") center/cover no-repeat;
+    font-family: 'Franklin_Gothic';
+    margin-top: 70px;
 }
 
 .what_can_i_do h2 {
-    position: relative;
     text-align: center;
-    top: 170px;
     text-transform: uppercase;
     font-size: 25px;
+    padding-top: 50px;
 }
 
 .what_can_i_do hr {
@@ -298,45 +313,39 @@ nav {
     border: none;
     height: 5px;
     background: orange;
-    margin: 0px auto;
+    margin: 0 auto;
     border-radius: 10px;
-    position: relative;
-    top: 195px;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
 
-.what_can_i_do ul {
-    display: flex;
-    position: relative;
-    bottom: 170px;
-    
-}
 
-.what_can_i_do li {
-    text-align: center; 
-    width: 400px;
-}
-
-.what_can_i_do ul h3 {
-    position: relative;
-    top: -40px;
+.what_can_i_do h3 {
     font-size: 18px;
     color: #cf7600;
+    margin-bottom: 20px;
 }
 
-.what_can_i_do ul img {
-    margin-top: -100px;
+.what_can_i_do img {
+    margin-bottom: 30px;
+    height: 40px;
 }
 
 
 .what_can_i_do span {
-    display: inline-block;
-    width: 250px;
+    font-family: 'Calibri', sans-serif;
 }
 
+.mark, mark {
+    background: rgba(0, 0, 0, 0);
+}
+/*
 .keys h2 {
     text-align: center;
     font-size: 25px;
     text-transform: uppercase;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .keys hr {
@@ -354,7 +363,8 @@ nav {
     display: block;
     text-align: center;
     margin-top: 55px;
-
+    font-family: 'Calibri', sans-serif;
+    font-size: 15px;
 }
 
 .keys img {
@@ -363,7 +373,7 @@ nav {
     top: 40px;
 }
 
-
+/*
 
 
 .client {
@@ -376,12 +386,15 @@ nav {
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 15px;
+    font-family: 'Franklin_Gothic', sans-serif;
 
 }
 
 .client span {
-    font-size: 12px;
+    font-size: 15px;
     color: #3f495a;
+    font-family: 'Calibri', sans-serif;
+
 }
 
 
@@ -395,11 +408,15 @@ nav {
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 15px;
+    font-family: 'Franklin_Gothic', sans-serif;
+
 }
 
 .site span {
-    font-size: 12px;
+    font-size: 15px;
     color: #3f495a;
+    font-family: 'Calibri', sans-serif;
+
 }
 
 
@@ -416,7 +433,8 @@ nav {
     border-radius: 8px;
     width: 210px; 
     transition: all 0.3s ease;
-    
+    font-family: 'Franklin_Gothic', sans-serif;
+
 }
 
 .desc_keys input:hover{
@@ -438,9 +456,17 @@ nav {
 
 
 .title_keys h2 {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 12px;
     margin-top: 30px;
+    font-family: 'Franklin_Gothic', sans-serif;
+
+}
+
+.title_keys span {
+    font-family: 'Calibri', sans-serif;
+    font-size: 15px;
+    color: #3f495a
 }
 
 .price {
@@ -450,6 +476,7 @@ nav {
 .cost_calculation {
     text-align: center;
     font-size: 25px;    
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .desc_price {
@@ -463,6 +490,8 @@ nav {
     margin-bottom: 15px;
     margin-top: 35px;
     text-transform: uppercase;
+    font-family: 'Franklin_Gothic', sans-serif;
+
 }
 
 .desc_price select {
@@ -493,7 +522,8 @@ nav {
 .terms_and_cost {
     text-align: left;
     margin-left: 348px;
-    font-size: 15.5px;
+    font-size: 17.5px;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .terms_and_cost h3 {
@@ -518,6 +548,7 @@ nav {
     bottom: 365px;
     font-size: 25px;
     text-transform: uppercase;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .statistic hr {
@@ -550,13 +581,15 @@ nav {
     margin-bottom: 20px;
     color: #323e4f;
     font-weight: bold;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .statistic span {
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
     color: #47515f;
+    font-family: 'Calibri', sans-serif;
 }
 
 .reviews h2 {
@@ -565,6 +598,7 @@ nav {
     bottom: 75px;
     text-transform: uppercase;
     font-size: 25px;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .reviews hr {
@@ -593,8 +627,16 @@ nav {
 .reviews h4 {
     margin-bottom: 35px;
     max-width: 700px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 16px;
 }
 
+
+.reviews span {
+    font-size: 15px;
+    font-family: 'Calibri', sans-serif;
+
+}
 
 .dot_reviews {
     margin-top: 40px;
@@ -615,6 +657,7 @@ nav {
     text-transform: uppercase;
     position: relative;
     bottom: -70px;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .contacts hr {
@@ -640,6 +683,8 @@ nav {
     color: white;
     bottom: 530px;
     position: relative;
+    font-family: 'Franklin_Gothic', sans-serif;
+    font-size: 14px;
 }
 
 .contacts_icon img {
@@ -691,6 +736,7 @@ nav {
 .contacts_info span {
     margin-right: 92px;
     transition: all 0.2s ease;
+    font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .contacts_info a {
@@ -771,19 +817,77 @@ nav {
 .footer_bg h5 {
     color: white;
     margin-top: -50px;
+    font-size: 12px;
 }
 
 
 .footer_image {
     width: 100%;
     height: 88px;
+}*/
+
+@media (max-width:991px){
+    .title{
+        margin-top: 265px;
+    }
+    .title h1{
+        text-shadow:
+            1px 1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            -1px -1px 0 black;
+        color: white;
+        font-size: 40px;
+    }
+    .title h4 {
+        text-shadow:
+            -1px -1px #FFF,
+            -2px -2px #FFF,
+            -1px 1px #FFF,
+            -2px 2px #FFF,
+            1px 1px #FFF,
+            2px 2px #FFF,
+            1px -1px #FFF,
+            2px -2px #FFF,
+            -3px -3px 2px #BBB,
+            -3px 3px 2px #BBB,
+            3px 3px 2px #BBB,
+            3px -3px 2px #BBB;
+        color: steelblue;
+    }
 }
 
-
-
-
-
-
+@media (max-width:575px){
+    .about-me {
+        margin-left: 1px;
+    }
+    .mark {
+        margin-top: 20px;
+    }
+    .speaker {
+        margin-top: 20px;
+    }
+    .rocket {
+        margin-top: 20px;
+    }
+    .what_can_i_do img {
+        margin-bottom: 5px;
+    }
+    .what_can_i_do h3 {
+        margin-bottom: 5px;
+    }
+    .what_can_i_do hr {
+        margin-bottom: 60px;
+    }
+}
+@media (max-width:767px){
+    .speaker {
+        margin-top: 20px;
+    }
+    .rocket {
+        margin-top: 20px;
+    }
+}
 
 
 
