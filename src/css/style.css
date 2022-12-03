@@ -38,7 +38,6 @@ nav {
     color:#fff;
     font-size: 24px;
     line-height: 60px;
-    float: left;
     -webkit-animation: move 1.2s ease;
     -o-animation: move 1.2s ease;
     animation: move 1.2s ease;
@@ -158,7 +157,6 @@ nav {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .title {
-    float: left;
     color: #2c384a;
     text-align: center;
     width: 100%;
@@ -340,9 +338,9 @@ nav {
 .mark, mark {
     background: rgba(0, 0, 0, 0);
 }
-/*
+
 .keys h2 {
-    text-align: center;
+    
     font-size: 25px;
     text-transform: uppercase;
     font-family: 'Franklin_Gothic', sans-serif;
@@ -353,39 +351,24 @@ nav {
     border: none;
     height: 5px;
     background: orange;
-    margin: 0px auto;
+    margin: 25px auto;
     border-radius: 10px;
-    position: relative;
-    top: 20px;
+    opacity: 1;
 }
 
 .keys span {
-    display: block;
-    text-align: center;
-    margin-top: 55px;
     font-family: 'Calibri', sans-serif;
     font-size: 15px;
 }
 
 .keys img {
-    position: relative;
-    right: calc(50% - 620px);
-    top: 40px;
-}
-
-/*
-
-
-.client {
-    position: relative;
-    bottom: 166px;
-    left: 218px;
+    max-width: 100%;
 }
 
 .client h2 {
     font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-family: 'Franklin_Gothic', sans-serif;
 
 }
@@ -397,17 +380,11 @@ nav {
 
 }
 
-
-.site {
-    position: relative;
-    bottom: 152px;
-    left: 218px;
-}
-
 .site h2{
+    margin-top: 10px;
     font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-family: 'Franklin_Gothic', sans-serif;
 
 }
@@ -419,22 +396,21 @@ nav {
 
 }
 
-
+/*.keys-ks {
+    margin-top: -120px;
+}*/
 
 .desc_keys input {
-    margin-left: 218px;
-    bottom: 130px;
-    position: relative;
-    padding: 14px 22px;
+    padding: 12px 16px;
     font-size: 20px;
     background: #63b5ae;
     text-transform: uppercase;
     color: white;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 210px; 
     transition: all 0.3s ease;
     font-family: 'Franklin_Gothic', sans-serif;
-
+    margin-top: 25px;
 }
 
 .desc_keys input:hover{
@@ -447,21 +423,36 @@ nav {
     transform: scale(1.05);
 }
 
-.title_keys {
-    position: relative;
-    left: 32%;
-    bottom: 45%;
-    width: 850px;
+.desc_keys {
+    display: flex;
+}
+@media(max-width:767px) {
+    .desc_keys input {
+        font-size: 15px;
+        width: 150px;
+        padding: 5px 8px;
+        margin-top:15px;
+    }
+    
+    .price-b h2{
+        font-size: 30px;
+    }
+    .desc_price h2 {
+        font-size: 17px!important;
+    }
+    .terms_and_cost h3 {
+        font-size: 17px;
+    }
 }
 
 
 .title_keys h2 {
     font-size: 17px;
     margin-bottom: 12px;
-    margin-top: 30px;
     font-family: 'Franklin_Gothic', sans-serif;
 
 }
+
 
 .title_keys span {
     font-family: 'Calibri', sans-serif;
@@ -470,22 +461,26 @@ nav {
 }
 
 .price {
-    margin-top: -80px;
+    margin-top: 30px;
 }
+
+.price-b {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 
 .cost_calculation {
     text-align: center;
-    font-size: 25px;    
+    font-size: 35px;    
     font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .desc_price {
-    text-align: center;
 }
 
 .desc_price h2 {
-    margin-left: 348px;
     text-align: left;
+    margin-left: 9%;
     font-size: 20px;
     margin-bottom: 15px;
     margin-top: 35px;
@@ -495,7 +490,6 @@ nav {
 }
 
 .desc_price select {
-    width: 890px;
     height: 60px;
     border-radius: 3px;
     padding-left: 25px;
@@ -509,7 +503,6 @@ nav {
 }
 
 .desc_price hr {
-    width: 890px;
     border: none;
     height: 2px;
     background: #d1d1d1;
@@ -517,11 +510,13 @@ nav {
     border-radius: 2px;
     position: relative;
     margin-top: 38px;
+    opacity: 1;
+    width: 83%;
 }
 
 .terms_and_cost {
+    margin-left:9%;
     text-align: left;
-    margin-left: 348px;
     font-size: 17.5px;
     font-family: 'Franklin_Gothic', sans-serif;
 }
@@ -532,20 +527,45 @@ nav {
     font-weight: bold;
 }
 
-
-.bg_statistic {
-    margin-top: 150px;
-    width: 100%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background-attachment: fixed;
-    
+.btn-primary {
+    background: #00b6af;
+    border: none;
+    color: white !important ;
+    transition: all 0.4s ease;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 40px;
+    padding-top: 10px;
+}
+.btn-primary:hover{
+    transform: scale(1.03);
+    background: #036573;
+}
+.btn-primary:active{
+    transform: scale(1.05);
+    background: #036573;
+    border: none;
 }
 
 
+.statistic {
+    margin-top: 20px;
+    background: url("../img/background_statistic.jpg") center/cover no-repeat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+@media(max-width:767px){
+    .statistic li {
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
+
 .statistic h2 {
-    position: relative;
+    padding-top: 85px;
     text-align: center;
-    bottom: 365px;
     font-size: 25px;
     text-transform: uppercase;
     font-family: 'Franklin_Gothic', sans-serif;
@@ -558,27 +578,23 @@ nav {
     background: orange;
     margin: 0px auto;
     border-radius: 10px;
-    position: relative;
-    bottom: 335px;
+    opacity: 1;
+    margin-top: 30px;
 }
 
 .statistic ul {
-    position: relative;
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     text-align: center;
-    left: calc(50% - 538px);
-    bottom: 272px;
-}
-
-.statistic li {
-    margin-right: 150px;
+    padding-bottom: 50px;
 }
 
 
 .statistic h3 {
     font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     color: #323e4f;
     font-weight: bold;
     font-family: 'Franklin_Gothic', sans-serif;
@@ -592,10 +608,13 @@ nav {
     font-family: 'Calibri', sans-serif;
 }
 
+.statistic_container img {
+    height: 50px;
+}
+
 .reviews h2 {
+    margin-top: 80px;
     text-align: center;
-    position: relative;
-    bottom: 75px;
     text-transform: uppercase;
     font-size: 25px;
     font-family: 'Franklin_Gothic', sans-serif;
@@ -606,27 +625,24 @@ nav {
     border: none;
     height: 5px;
     background: orange;
-    margin: 0px auto;
+    margin: 25px auto;
     border-radius: 10px;
-    position: relative;
-    bottom: 45px;
+    opacity: 1;
 }
 
 
 .reviews {
     text-align: center;
-    width: 700px;
     margin: 0 auto;
 }
 
 .photo {
-    margin-bottom: 25px;
-    margin-top: -15px;
+    margin-bottom: 30px;
+    margin-top: 50px;
 }
 
 .reviews h4 {
-    margin-bottom: 35px;
-    max-width: 700px;
+    margin-bottom: 25px;
     font-family: 'Calibri', sans-serif;
     font-size: 16px;
 }
@@ -648,114 +664,105 @@ nav {
     margin-left: 6px;
 }
 
+.contacts {
+    background: url("../img/background_contacts.jpg") center/cover no-repeat;
+}
 
 .contacts h2 {
     text-align: center;
     font-size: 25px;
-    margin-top: -40px;
+    margin-top: 40px;
     color: white;
     text-transform: uppercase;
-    position: relative;
-    bottom: -70px;
     font-family: 'Franklin_Gothic', sans-serif;
 }
 
 .contacts hr {
     width: 85px;
     border: none;
-    height: 5px;
+    height: 6px;
     background: orange;
     margin: 0px auto;
     border-radius: 10px;
-    position: relative;
-    bottom: 565px; 
+    opacity: 1;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .contacts_bg {
     width: 100%;
 }
 
-.under_contacts {
-    margin: 0 auto;
-    width: 600px;
-    display: block;
-    text-align: center;
+.contacts span{
     color: white;
-    bottom: 530px;
-    position: relative;
-    font-family: 'Franklin_Gothic', sans-serif;
-    font-size: 14px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 15px;
 }
+
 
 .contacts_icon img {
-    margin-left: 210px;
+
+}
+
+.contacts_desc {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+}
+
+.contacts_phone a {
+    text-decoration: none;
+    color: white;
 }
 
 
 
-.contacts_icon {
-    text-align: center;
-    bottom: 500px;
-    position: relative;
-    margin-left: calc(50% - 997px);
-}
-
-.contacts_icon a{
+.contacts a{
     display: inline-block;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.contacts_icon a:hover {
-    transform: scale(1.02);
+.contacts img {
+    transition: all 0.3s ease;
 }
-.contacts_icon a:active {
+.contacts img:hover {
+    transform: scale(1.02);
+
+}
+.contacts img:active {
     transform: scale(1.05);
 }
 
-.contacts_info {
-    text-align: center;
-    position: relative;
-    bottom: 475px;
-    color: white;
-}
 
-.contacts_info a {
-    display: inline-block;
-    transition: all 0.2s ease;
-}
-
-.contacts_info a:hover {
+.contacts a:hover {
     transform: scale(1.02);
 }
-
-.contacts_info a:active {
-    transform: scale(1.03);
-    color: #edf6ff;
+.contacts a:active {
+    transform: scale(1.05);
 }
 
-.contacts_info span {
-    margin-right: 92px;
-    transition: all 0.2s ease;
-    font-family: 'Franklin_Gothic', sans-serif;
+@media(max-width:717px){
+    .contacts_geo {
+        margin-right: 15px;
+}
+    .contacts_letter {
+        margin-right: 15px;
+}
 }
 
-.contacts_info a {
-    color: white;
-}
 
 .form_contacts_txt h2{
-    margin-top: -88px;
     font-size: 20px;
-    position: relative;
-    bottom: 354px;
     color: white;
+    margin-top:15px;
 }
 
 
 
 .form_contacts_textarea {
     text-align: center;
-    margin-top: -335px;
+    margin-top: 10px;
 }
 
 .form_contacts_textarea textarea {
@@ -778,10 +785,15 @@ nav {
 
 
 .contacts_textarea_message {
-    width: 609px!important;
     height: 80px!important;
+    width: 609px!important;
 }
 
+@media(max-width:1199px){
+    .contacts_textarea_message {
+        width: 292px!important;
+    }
+}
 .input_message {
     height: 40px;
     width: 170px;
@@ -791,12 +803,11 @@ nav {
     border: 2px solid white;
     font-weight: bold;
     display: block;
-    margin-top: -394px;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    top: 420px;
     transition: all 0.5s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .input_message:hover {
@@ -811,7 +822,6 @@ nav {
 
 .footer_bg {
     text-align: center;
-    
 }
 
 .footer_bg h5 {
@@ -824,7 +834,7 @@ nav {
 .footer_image {
     width: 100%;
     height: 88px;
-}*/
+}
 
 @media (max-width:991px){
     .title{
