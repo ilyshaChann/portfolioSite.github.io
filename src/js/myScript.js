@@ -1,6 +1,6 @@
 "use strict"
 
-let objFull = {};
+/*let objFull = {};
 let objTerms = {};
 
 let typeSite = prompt("Какой тип сайта ты хочешь себе?\n(Для выбора какого-либо типа сайта, просто введи его название!)\n\nВарианты: 'Сайт-визитка - 2000руб., Шаблонный - 1500руб., Лендинг - 2500руб., Информационный - 3000руб.'...\n\nДля большего ознакомления и подробностей, пишите на почту (вкладка 'контакты' в 'шапке' сайта!)");
@@ -89,5 +89,21 @@ for (let key in objTerms){
 	objSumTerms += objTerms[key];
 };
 
-confirm("Конечная стоимость сайта: " + objSum + "руб.\n\nСроки для созданания сайта: " + objSumTerms + " дней." + "\n\nЕсли что-то не устраивает, вы всегда можете обратиться  ко мне по почте (ссылку на нее можно найти в 'шапке' сайта).")
+confirm("Конечная стоимость сайта: " + objSum + "руб.\n\nСроки для созданания сайта: " + objSumTerms + " дней." + "\n\nЕсли что-то не устраивает, вы всегда можете обратиться  ко мне по почте (ссылку на нее можно найти в 'шапке' сайта).")*/
 
+/*$(document).ready(function(){
+$(window).scroll(() => {
+	let scrollDist = $(window).scrollTop();
+	$(.)
+});
+});*/	  
+
+$(window).on('load', function(){
+    $(".loader").fadeOut().end().delay(500).fadeOut('slow');    
+
+});
+
+$("a[href^='#']").click(function(){
+	let valHref = $(this).attr("href");
+	$("html, body").animate({scrollTop: $(valHref).offset().top - 55 + 'px'});
+})

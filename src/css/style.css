@@ -10,6 +10,42 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.loader {
+    position: fixed;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	margin-left: calc(50% - 60px);
+}
+
+.loader_two {
+	position: relative;
+	top: 50%;
+	bottom: 50%;
+	border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #7dafff;
+    border-bottom: 16px solid #012f78;
+    width: 120px;
+    height: 120px;
+    animation: spinner 2s linear infinite;
+
+}
+
+@keyframes spinner{
+  0%{
+    transform: rotate(0deg);
+  }
+  
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
 main {
     height: 100%;
 }
