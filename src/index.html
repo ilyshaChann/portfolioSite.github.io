@@ -13,12 +13,30 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/e452b5b32b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 <body>
 <div class="loader">
 	<div class="loader_two"></div>
+</div>
+<div class="modal" id="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title text-center">Уже собрался уходить?</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+       	<img class="modal_img" src="img/joke_bird.jpg" alt="modal_picture">
+        <p>Уверен, что не хочешь ставить заявку на приобретение сайта?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <a href="#price"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Оставить заявку</button></a>
+      </div>
+    </div>
+  </div>
 </div>
 <main>
    <header>
@@ -32,11 +50,11 @@
 				  <div class="menu">
 					   <ul>
 						   <li>
-							   <a href="#about">Обо мне</a>
+							   <a class="li_menu" href="#about">Обо мне</a>
 						   </li>
 							  <li>
 							   <a href="#services">Услуги</a>
-						   </li>
+						   </li >
 							  <li>
 								<a href="#keys">Кейсы</a>
 						   </li>
@@ -82,15 +100,15 @@
                 <div class="title">
                     <h1>Привет<br>Меня зовут Илья Чесноков</h1>
                     <h4>Я фулл-стек веб-разработчик. <br> Python и JavaScript программист, рад знакомству!</h4>
-                    <input type="submit" value="Обо мне">
+                    <a href="#about"><input type="submit" value="Обо мне"></a>
                     <input type="submit" value="Мои работы">
                 </div>
             </div>
         </div>
     </div>
     </div>
-    <section>
-        <div class="about_me" id="about">
+    <section class="sect">
+        <div class="about_me section" id="about">
            <div class="about_me_container container">
                <div class="row justify-content-center">
                     <div class="col-12 col-sm-6 col-md-3 text-center mt-5">
@@ -98,7 +116,7 @@
                         <hr>
                     </div>
                </div>
-                    <img class="I_am_png d-block mx-auto" src="img/I_am.png" alt="также я">
+                    <img class="all_photo I_am_png d-block mx-auto" src="img/i_am_bad.png" data-src="img/I_am.png"alt="также я">
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-12 col-md-10 col-lg-8 text-center text-md-start my-4">
                             <span class="about_me_span">
@@ -117,8 +135,8 @@
                 </div>
             </div>
         </section> 
-        <section>
-            <div class="what_can_i_do" id="services">
+        <section class="sect">
+            <div class="what_can_i_do section" id="services">
                <div class="what_can_i_do_container continer">
                     <h2>Что я умею</h2>
                     <hr>
@@ -147,50 +165,167 @@
                 </div>    
                 </div>
             </section>
-        <section>
-            <div class="keys" id="keys">
+        <section class="sect">
+            <div class="keys section" id="keys">
+              <div id="carouselExampleDarkTwo" class="carousel carousel-dark slide" data-bs-ride="carousel">
                <div class="keys_container container">
                    <div class="row justify-content-center text-center">
-                       <div class="col-lg-10 col-sm-12 my-5">
-                            <h2>Кейсы</h2>
-                            <hr>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium temporibus enim, quis ad aspernatur cum!</span>
-                            <img class="mt-5" src="img/background_keys.png" alt="кейсы">  
+                       <div class="col-lg-10 col-sm-12">
+						   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+							  <div class="carousel-inner">
+								<div class="carousel-item active">
+								  <div class="carousel-caption">
+									<h2>Кейсы</h2>
+                            		<hr>
+                            		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium temporibus enim, quis ad aspernatur cum!</span>
+                            		<div class="carousel-inner">
+                            			<img class="image-link all_photo mt-5" src="img/background_keys_bad.png" href="img/background_keys.png" data-src="img/background_keys.png" alt="кейсы">
+                            			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Предыдущий</span>
+										</button>
+									  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Следующий</span>
+									  	</button>
+                            		</div>
+                            		<div class="desc_keys text-start">
+									  <div class="desc_keys_container container">
+									  <div class="row">
+										  <div class="keys-ks col-10 offset-lg-4 offset-md-3 offset-sm-2">
+											  <div class="client">
+												  <h2>Клиент:</h2>
+												  <span>Заказчик/компания...</span>   
+										   </div>
+										   <div class="site">
+												<h2>Сайт:</h2>
+												<span>Ссылка на сайт...</span><br>
+												<input type="submit" value="Посетить сайт">
+											</div>
+										  </div>
+									  </div>
+									</div>
+									<div class="title_keys">
+									   <div class="title_keys_container">
+										  <div class="row w-100">
+											 <div class="title-keys ms-3 col-12">
+												  <h2>Название проекта</h2>
+												  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolorem, similique. Minima culpa, suscipit veritatis laboriosam ea at quis distinctio Lo
+												  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio sint quam suscipit necessitatibus mollitia, voluptatibus architecto repellendus delectus neque!</span>
+											 </div>
+										  </div>
+									   </div>
+									</div>
+									</div>
+								  </div>
+								</div>
+								<div class="carousel-item">
+								  <div class="carousel-caption">
+									<h2>Кейсы</h2>
+                            		<hr>
+                            		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium temporibus enim, quis ad aspernatur cum!</span>
+                            		<div class="carousel-inner">
+                            			<img class="image-link all_photo mt-5" src="img/background_keys_bad.png" href="img/background_keys.png" data-src="img/background_keys.png" alt="кейсы">
+                            			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Предыдущий</span>
+										</button>
+									  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Следующий</span>
+									  	</button>
+                            		</div>
+                            		<div class="desc_keys text-start">
+									  <div class="desc_keys_container container">
+									  <div class="row">
+										  <div class="keys-ks col-10 offset-lg-4 offset-md-3 offset-sm-2">
+											  <div class="client">
+												  <h2>Клиент:</h2>
+												  <span>Заказчик/компания...</span>   
+										   </div>
+										   <div class="site">
+												<h2>Сайт:</h2>
+												<span>Ссылка на сайт...</span><br>
+												<input type="submit" value="Посетить сайт">
+											</div>
+										  </div>
+									  </div>
+									</div>
+									<div class="title_keys">
+									   <div class="title_keys_container">
+										  <div class="row w-100">
+											 <div class="title-keys ms-3 col-12">
+												  <h2>Название проекта</h2>
+												  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolorem, similique. Minima culpa, suscipit veritatis laboriosam ea at quis distinctio Lo
+												  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio sint quam suscipit necessitatibus mollitia, voluptatibus architecto repellendus delectus neque!</span>
+											 </div>
+										  </div>
+									   </div>
+									</div>
+									</div>
+								  </div>
+								</div>
+								<div class="carousel-item">
+								  <div class="carousel-caption">
+									<h2>Кейсы</h2>
+                            		<hr>
+                            		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium temporibus enim, quis ad aspernatur cum!</span>
+                            		<div class="carousel-inner">
+                            			<img class="image-link all_photo mt-5" src="img/background_keys_bad.png" href="img/background_keys.png" data-src="img/background_keys.png" alt="кейсы">
+                            			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Предыдущий</span>
+										</button>
+									  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Следующий</span>
+									  	</button>
+                            		</div>
+                            		<div class="desc_keys text-start">
+									  <div class="desc_keys_container container">
+									  <div class="row">
+										  <div class="keys-ks col-10 offset-lg-4 offset-md-3 offset-sm-2">
+											  <div class="client">
+												  <h2>Клиент:</h2>
+												  <span>Заказчик/компания...</span>   
+										   </div>
+										   <div class="site">
+												<h2>Сайт:</h2>
+												<span>Ссылка на сайт...</span><br>
+												<input type="submit" value="Посетить сайт">
+											</div>
+										  </div>
+									  </div>
+									</div>
+									<div class="title_keys">
+									   <div class="title_keys_container">
+										  <div class="row w-100">
+											 <div class="title-keys ms-3 col-12">
+												  <h2>Название проекта</h2>
+												  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolorem, similique. Minima culpa, suscipit veritatis laboriosam ea at quis distinctio Lo
+												  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio sint quam suscipit necessitatibus mollitia, voluptatibus architecto repellendus delectus neque!</span>
+											 </div>
+										  </div>
+									   </div>
+									</div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							  <div class="carousel-indicators">
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							  </div>
+						   </div>  
                        </div>
                    </div>
                 </div> 
             </div>
-            <div class="desc_keys">
-              <div class="desc_keys_container container">
-              <div class="row">
-                  <div class="keys-ks col-10 offset-lg-4 offset-md-3 offset-sm-2">
-                      <div class="client">
-                          <h2>Клиент:</h2>
-                          <span>Заказчик/компания...</span>   
-                   </div>
-                   <div class="site">
-                        <h2>Сайт:</h2>
-                        <span>Ссылка на сайт...</span><br>
-                        <input type="submit" value="Посетить сайт">
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="title_keys">
-               <div class="title_keys_container">
-                  <div class="row w-100">
-                     <div class="title-keys ms-3 col-12 col-lg-9 col-md-10">
-                          <h2>Название проекта</h2>
-                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolorem, similique. Minima culpa, suscipit veritatis laboriosam ea at quis distinctio Lo
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio sint quam suscipit necessitatibus mollitia, voluptatibus architecto repellendus delectus neque!</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            </div>
+			</div>
 		</section>
-       <section>
-            <div class="price" id="price">
+       <section class="sect">
+            <div class="price section" id="price">
                <div class="price_container container">
                    <div class="row justify-content-center text-center">
                        <div class="price-b col-10">
@@ -198,46 +333,52 @@
                             <div class="desc_price">
                                 <h2>Тип сайта</h2>
                                 <form action="#">
-                                    <select class="col-10" name="" id="">
+                                    <select class="col-10" name="" id="sel_1">
                                         <option value="" hidden>Выберите пункт:</option>
-                                        <option value="">.</option>
-                                        <option value="">..</option>
-                                        <option value="">...</option>
-                                        <option value="">....</option>
+                                        <option value="2000" days="3">Сайт-визитка</option>
+                                        <option value="1500" days="2">Шаблонный</option>
+                                        <option value="2500" days="4">Лендинг</option>
+                                        <option value="3000" days="5">Информационный</option>
                                     </select>
                                 </form>
                                 <h2>Дизайн</h2>
                                 <form action="#">
-                                    <select class="col-10" name="" id="">
+                                    <select class="col-10" name="" id="sel_2">
                                         <option value="" hidden>Выберите пункт:</option>
-                                        <option value="">-</option>
-                                        <option value="">--</option>
-                                        <option value="">---</option>
-                                        <option value="">----</option>
+                                        <option value="2000" days="1">Классический</option>
+                                        <option value="1500" days="1">Информационный</option>
+                                        <option value="2500" days="3">Корпоративный</option>
+                                        <option value="3000" days="3">Рисованный</option>
                                     </select>
                                     <h2>Адаптивность</h2>
                                     <form action="">
-                                        <select class="col-10" name="" id="">
+                                        <select class="col-10" name="" id="sel_3">
                                             <option value="" hidden>Выберите пункт:</option>
-                                            <option value="">Адаптивный сайт</option>
-                                            <option value="">Неадаптивный сайт</option>
+                                            <option value="2000" days="4">Адаптивный сайт</option>
+                                            <option value="1500" days="2">Неадаптивный сайт</option>
                                         </select>
                                     </form>
                                 </form>
                                 <hr>
                                    <div class="terms_and_cost">
-                                    <h3>Сроки:</h3>
-                                    <h3>Стоимость:</h3>
+									<div class="terms">
+										<h3>Сроки:</h3>
+										<h4>0</h4>
+									</div>
+									<div class="cost">
+										<h3>Стоимость:</h3>
+										<h4>0</h4>
+									</div>
                                  </div>
-                                 <a href="#" class="btn btn-primary">Оставить заявку</a>
+                                 <a href="#" class="button_calc btn btn-primary">Оставить заявку</a>
                             </div>
                         </div>
                        </div>
                    </div>
                </div>
            </section>
-       		<section>
-            <div class="statistic" id="statistic">
+       		<section class="sect">
+            <div class="statistic section" id="statistic">
                 <h2>Немного статистики:</h2>
                 <hr>
                 <div class="statistic_container container">
@@ -246,22 +387,22 @@
                             <ul>
                                 <li>
                                     <img src="img/smile.png" alt="смайл" class="smile">
-                                    <h3>20</h3>
+                                    <h3 class="animate_numbers">20</h3>
                                     <span>Довольных клиентов</span>
                                 </li>
                                 <li>
                                     <img src="img/mark_2.png" alt="иконка" class="mark_icon">
-                                    <h3>3000</h3>
+                                    <h3 class="animate_numbers">3000</h3>
                                     <span>Часов работы</span>
                                 </li>
                                 <li>
                                     <img src="img/check_mark.png" alt="галочка" class="check_mark">
-                                    <h3>20</h3>
+                                    <h3 class="animate_numbers">20</h3>
                                     <span>Завершенных проектов</span>
                                 </li>
                                 <li>
                                     <img src="img/cup.png" alt="кубок" class="cup">
-                                    <h3>7</h3>
+                                    <h3 class="animate_numbers">7</h3>
                                     <span>Наград получено</span>
                                 </li>
                             </ul>
@@ -270,28 +411,62 @@
                 </div>
             </div>
         </section>
-           <section>
-            <div class="reviews" id="reviews">
-               <div class="reviews_container container">
+           <section class="sect">
+            <div class="reviews section" id="reviews">
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				  <div class="reviews_container container">
                    <div class="row justify-content-center text-center">
                        <div class="col-12 col-md-10 col-lg-8">
-                            <h2>Отзывы</h2>
-                            <hr>
-                            <img src="img/photo.png" alt="фото" class="photo">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita animi ut, sunt accusamus praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatem soluta laboriosam accusamus corporis sint laudantium iure fugiat harum! Sunt.</h4>
-                            <span><b>Дмитрий</b>, руководитель компании "Все по маслу"</span><br>
-                            <div class="dot_reviews">
-                                <img src="img/orange_dot.png" alt="оранжевая точка">
-                                <img src="img/dot.png" alt="1-я серая точка">
-                                <img src="img/dot.png" alt="2-я серая точка">
-                            </div>      
-                       </div>
+                           <div class="carousel-inner">
+								<div class="carousel-item active" data-bs-interval="10000">
+								  <div class="carousel-caption">
+									<h2>Отзывы</h2>
+									<hr>
+									<img src="img/photo.png" class="photo" alt="фото">
+									<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita animi ut, sunt accusamus praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatem soluta laboriosam accusamus corporis sint laudantium iure fugiat harum! Sunt.</h4>
+									<span><b>Дмитрий</b>, руководитель компании "Все по маслу"</span><br> 
+								  </div>
+								</div>
+								<div class="carousel-item">
+								  <div class="carousel-caption" data-bs-interval="2000">
+									<h2>Отзывы</h2>
+									<hr>
+									<img src="img/photo_2.png" class="photo" alt="фото">
+									<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita animi ut, sunt accusamus praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatem soluta laboriosam accusamus corporis sint laudantium iure fugiat harum! Sunt.</h4>
+									<span><b>Дмитрий</b>, руководитель компании "Все по маслу"</span><br> 
+								  </div>
+								  </div>
+								<div class="carousel-item">
+								  <div class="carousel-caption" data-bs-interval="2000">
+									<h2>Отзывы</h2>
+									<hr>
+									<img src="img/photo_3.png" class="photo" alt="фото">
+									<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident expedita animi ut, sunt accusamus praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatem soluta laboriosam accusamus corporis sint laudantium iure fugiat harum! Sunt.</h4>
+									<span><b>Дмитрий</b>, руководитель компании "Все по маслу"</span><br> 
+								  </div>
+								  </div>
+                      	  	</div>
+                      	  	<div class="carousel-indicators">
+								<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							  </div> 
+                       	</div>
                    </div>
                </div>
-            </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Предыдущий</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Следующий</span>
+				  </button>
+				</div>
+            </div> 
         </section>
-           <section>
-            <div class="contacts" id="contacts">
+           <section class="sect">
+            <div class="contacts section" id="contacts">
                <div class="contacts_container container">
                    <div class="row justify-content-center text-center text-decoration-none">
                        <div class="col-12 col-md-10 col-lg-8">
@@ -333,6 +508,8 @@
 </main>
 <script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/e452b5b32b.js" crossorigin="anonymous"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/myScript.js"></script>
 </body>
 </html>
