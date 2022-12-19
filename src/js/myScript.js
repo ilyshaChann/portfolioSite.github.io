@@ -94,8 +94,10 @@ confirm("Конечная стоимость сайта: " + objSum + "руб.\n
 $(document).ready(function(){	
 	function calc(){
 	let sumCalc = parseInt($('#sel_1 option:selected').val()) + parseInt($('#sel_2 option:selected').val()) + parseInt($('#sel_3 option:selected').val());
+		if(isNaN(sumCalc)) sumCalc = 0;
 	let daysCalc = parseInt($('#sel_1 option:selected').attr('days')) + parseInt($('#sel_2 option:selected').attr('days')) + parseInt($('#sel_3 option:selected').attr('days'));
-	$('.terms h4').text(daysCalc);
+		if(isNaN(daysCalc)) daysCalc = 0;
+	$('.terms h4').text(daysCalc)
 	$('.cost h4').text(sumCalc);
 }	
 $('select').on('change', function(){
@@ -154,7 +156,7 @@ $(window).scroll(() => {
 				});
 			};
 	
-			$(window).addEventListener('load', setTimeout(function () {
+			 $(document).ready(function(){('load', setTimeout(function () {
 			const elemModal = document.querySelector('#modal');
 			const modal = new bootstrap.Modal(elemModal);
 			modal.show();
@@ -174,13 +176,14 @@ $(window).scroll(() => {
 				function onEntryStatistic(entry) {
             		entry.forEach(change => {
 						if (change.isIntersecting) {
-							$('.animate_numbers').spincrement({
+							$('.animate_numbers').delay(200).spincrement({
 							 thousandSeparator: "",
 							 duration: 3000
                     });
 				}
 			});
 		};
+	});
 				$('.image-link').magnificPopup({
 					type: 'image'
 				});
